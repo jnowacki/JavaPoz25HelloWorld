@@ -7,5 +7,12 @@ public class Main {
 
         piotrek.sayHello();
         piotrek.sayAge();
+
+        piotrek.sayHelloToSomeone("ciocia Kasia");
+
+        System.out.println("Piotrek is");
+        System.out.println(piotrek.getAge());
+        System.out.println("yo");
+
     }
 }
