@@ -247,36 +247,67 @@ public class Main {
 //            System.out.println(inputFromUser);
 //        }
 
-        String inputFromUser;
-        System.out.println("Podaj dzialanie lub [k] aby wyjsc: ");
+//        System.out.println("Podaj dzialanie lub [k] aby wyjsc: ");
+//        String inputFromUser = in.nextLine();
+//
+//        while (!inputFromUser.equals("k")) {
+//            System.out.println("Podaj a: ");
+//            int a = Integer.valueOf(in.nextLine());
+//
+//            System.out.println("Podaj b: ");
+//            int b = Integer.valueOf(in.nextLine());
+//
+//            switch (inputFromUser) {
+//                case "+":
+//                    System.out.printf("%d + %d = %d\n", a, b, a + b);
+//                    break;
+//                case "-":
+//                    System.out.printf("%d - %d = %d\n", a, b, a - b);
+//                    break;
+//                case "*":
+//                    System.out.printf("%d * %d = %d\n", a, b, a * b);
+//                    break;
+//                case "/":
+//                    System.out.printf("%d / %d = %d\n", a, b, a / b);
+//                    break;
+//                default:
+//                    System.out.println("nieznane dzialanie");
+//            }
+//
+//            System.out.println("Podaj dzialanie lub [k] aby wyjsc: ");
+//            inputFromUser = in.nextLine();
+//        }
+//
+//        System.out.println("Koniec programu");
 
-        while (!(inputFromUser = in.nextLine()).equals("k")) {
-            System.out.println("Podaj a: ");
-            int a = Integer.valueOf(in.nextLine());
+//        String[] zakupy = new String[3];
+//
+//        for (int i = 0; i < zakupy.length; i++) {
+//            System.out.println("podaj produkt nr " + (i + 1));
+//            zakupy[i] = in.nextLine();
+//        }
+//
+//        System.out.println("Twoje zakupy:");
+//
+//        for (int i = 0; i < zakupy.length; i++) {
+//            System.out.println("Produkt nr "+ (i + 1) + ": " + zakupy[i]);
+//        }
 
-            System.out.println("Podaj b: ");
-            int b = Integer.valueOf(in.nextLine());
+        String[] zakupy = new String[3];
 
-            switch (inputFromUser) {
-                case "+":
-                    System.out.printf("%d + %d = %d\n", a, b, a + b);
-                    break;
-                case "-":
-                    System.out.printf("%d - %d = %d\n", a, b, a - b);
-                    break;
-                case "*":
-                    System.out.printf("%d * %d = %d\n", a, b, a * b);
-                    break;
-                case "/":
-                    System.out.printf("%d / %d = %d\n", a, b, a / b);
-                    break;
-                default:
-                    System.out.println("nieznane dzialanie");
-            }
+        int i = 0;
 
-            System.out.println("Podaj dzialanie lub [k] aby wyjsc: ");
+        while(i < zakupy.length) {
+            System.out.println("podaj produkt nr " + (i + 1));
+            zakupy[i] = in.nextLine();
+            i++;
         }
 
-        System.out.println("Koniec programu");
+        System.out.println("Twoje zakupy:");
+        i = 0;
+        while(i < zakupy.length) {
+            System.out.println("Produkt nr "+ (i + 1) + ": " + zakupy[i]);
+            i++;
+        }
     }
 }
