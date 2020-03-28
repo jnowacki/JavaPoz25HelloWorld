@@ -1,5 +1,6 @@
 package pl.jnowacki;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -395,18 +396,116 @@ public class Main {
 //            System.out.println(result);
 //        }
 //
-//        slajd 53, zad 1a
+//        slajd 53
+//
+//        int[] myIntTab = {2, 6, 2, 5, -10, -56, 20};
+//
+////        zad 1a
+//        int max1a = myIntTab[0];
+//
+//        for (int i = 1; i < myIntTab.length; i++) {
+//            if(max1a < myIntTab[i]) {
+//                max1a = myIntTab[i];
+//            }
+//        }
+//
+//        System.out.println("Max to: " + max1a);
+//
+////        zad 1b
+//        int min1b = myIntTab[0];
+//
+//        for (int i = 1; i < myIntTab.length; i++) {
+//            if(min1b > myIntTab[i]) {
+//                min1b = myIntTab[i];
+//            }
+//        }
+//
+//        System.out.println("Min to: " + min1b);
+//
+////        zad 1c
+//        int suma1c = 0;
+//
+//        for (int i = 0; i < myIntTab.length; i++) {
+//            suma1c += myIntTab[i];
+//        }
+//
+//        System.out.println("Suma to: " + suma1c);
+//
+////        zad 1d
+//        int suma1d = 0;
+//
+//        for (int i = 0; i < myIntTab.length; i++) {
+//            suma1d += myIntTab[i];
+//        }
+//
+//        System.out.println("Średnia to: " + suma1d / myIntTab.length);
+//
+////        tablice wielowymiarowe
+//        int[][] my2dTable = {
+//                {1, 3, 5},
+//                {5, 6},
+//                {4, 6, -10, 3}
+//        };
+//
+//        for (int i = 0; i < my2dTable.length; i++) {
+//            for (int j = 0; j < my2dTable[i].length; j++){
+//                System.out.print(my2dTable[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+//
+//        my2dTable[1][1] = 999999;
+//
+//        for (int i = 0; i < my2dTable.length; i++) {
+//            for (int j = 0; j < my2dTable[i].length; j++){
+//                System.out.print(my2dTable[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+//
+//        int[][] my8x8tab = new int[8][8];
+//
+//        for (int i = 0; i < my8x8tab.length; i++) {
+//            for (int j = 0; j < my8x8tab[i].length; j++){
+//                my8x8tab[i][j] = 1;
+//            }
+//        }
+//
+//        for (int i = 0; i < my8x8tab.length; i++) {
+//            for (int j = 0; j < my8x8tab[i].length; j++){
+//                System.out.print(my8x8tab[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+//
+//        slajd 56 z1
+        Scanner inSq = new Scanner(System.in);
 
-        int[] myIntTab = {9, 3, 5, 6, 45, -3, -100, 0};
+        System.out.println("Podaj rozmiar kwadratu: ");
+        int size = Integer.parseInt(inSq.nextLine());
 
-        int max = myIntTab[0];
+        String[][] z1p56Board = new String[size][size];
 
-        for (int i = 1; i < myIntTab.length; i++) {
-            if(max < myIntTab[i]) {
-                max = myIntTab[i];
+//        tworzenie planszy
+        for (int i = 0; i < z1p56Board.length; i++) {
+            for (int j = 0; j < z1p56Board[i].length; j++){
+                if(i == 0 || i == z1p56Board.length - 1) {
+                    z1p56Board[i][j] = "#";
+                } else if(j == 0 || j == z1p56Board[i].length - 1) {
+                    z1p56Board[i][j] = "#";
+                } else {
+                    z1p56Board[i][j] = " ";
+                }
             }
         }
 
-        System.out.println("Max to: " + max);
+//        drukowanie
+        for (int i = 0; i < z1p56Board.length; i++) {
+            for (int j = 0; j < z1p56Board[i].length; j++){
+                System.out.print(z1p56Board[i][j]);
+            }
+            System.out.println();
+        }
+
     }
 }
