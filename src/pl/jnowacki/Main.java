@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String... args) {
 //        Person piotrek = new Person();
 //
 //        piotrek.sayHello();
@@ -478,34 +478,43 @@ public class Main {
 //            System.out.println();
 //        }
 //
-//        slajd 56 z1
-        Scanner inSq = new Scanner(System.in);
+////        slajd 56 z1
+//        Scanner inSq = new Scanner(System.in);
+//
+//        System.out.println("Podaj rozmiar kwadratu: ");
+//        int size = Integer.parseInt(inSq.nextLine());
+//
+//        String[][] z1p56Board = new String[size][size];
+//
+////        tworzenie planszy
+//        for (int i = 0; i < z1p56Board.length; i++) {
+//            for (int j = 0; j < z1p56Board[i].length; j++){
+//                if(i == 0 || i == z1p56Board.length - 1) {
+//                    z1p56Board[i][j] = "#";
+//                } else if(j == 0 || j == z1p56Board[i].length - 1) {
+//                    z1p56Board[i][j] = "#";
+//                } else {
+//                    z1p56Board[i][j] = " ";
+//                }
+//            }
+//        }
+//
+////        drukowanie
+//        for (int i = 0; i < z1p56Board.length; i++) {
+//            for (int j = 0; j < z1p56Board[i].length; j++){
+//                System.out.print(z1p56Board[i][j]);
+//            }
+//            System.out.println();
+//        }
 
-        System.out.println("Podaj rozmiar kwadratu: ");
-        int size = Integer.parseInt(inSq.nextLine());
+        varArgsTest(3, 3, 3, 1, 56);
+        System.out.printf("");
+    }
 
-        String[][] z1p56Board = new String[size][size];
-
-//        tworzenie planszy
-        for (int i = 0; i < z1p56Board.length; i++) {
-            for (int j = 0; j < z1p56Board[i].length; j++){
-                if(i == 0 || i == z1p56Board.length - 1) {
-                    z1p56Board[i][j] = "#";
-                } else if(j == 0 || j == z1p56Board[i].length - 1) {
-                    z1p56Board[i][j] = "#";
-                } else {
-                    z1p56Board[i][j] = " ";
-                }
-            }
+    private static void varArgsTest(int... numbers) {
+        System.out.println("liczba argumentow: " + numbers.length);
+        for (int number : numbers) {
+            System.out.println(number);
         }
-
-//        drukowanie
-        for (int i = 0; i < z1p56Board.length; i++) {
-            for (int j = 0; j < z1p56Board[i].length; j++){
-                System.out.print(z1p56Board[i][j]);
-            }
-            System.out.println();
-        }
-
     }
 }
