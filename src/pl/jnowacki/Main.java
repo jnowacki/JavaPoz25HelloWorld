@@ -344,25 +344,69 @@ public class Main {
 //        }
 
 //        kalkulator BMI
-        Scanner bmiIn = new Scanner(System.in);
+//        Scanner bmiIn = new Scanner(System.in);
+//
+//        System.out.println("Podaj wzrost w [m] ");
+//        double height = Double.parseDouble(bmiIn.nextLine().replace(',', '.'));
+//
+//        System.out.println("Podaj wagę w [kg] ");
+//        double weight = Double.parseDouble(bmiIn.nextLine().replace(',', '.'));
+//
+//        double bmi = weight / (Math.pow(height, 2));
+//
+//        System.out.printf("Twoje BMI to %.2f\n", bmi);
+//
+//        if(bmi > 25) {
+//            System.out.println("BMI za wysokie");
+//        } else if (bmi < 18) {
+//            System.out.println("BMI za niskie");
+//        } else {
+//            System.out.println("BMI w normie");
+//        }
+//
+//        FizzBuzz
+//
+//        for (int i = 1; i <= 100; i++) {
+//
+//            if(i % 15 == 0)
+//                System.out.println("FizzBuzz");
+//            else if (i % 3 == 0)
+//                System.out.println("Fizz");
+//            else if (i % 5 == 0)
+//                System.out.println("Buzz");
+//            else
+//                System.out.println(i);
+//        }
+//
+//        FizzBuzz inaczej
+//
+//        for (int i = 1; i <= 100; i++) {
+//            String result = "";
+//
+//            if (i % 3 == 0)
+//                result += "Fizz";
+//
+//            if (i % 5 == 0)
+//                result += "Buzz";
+//
+//            if (result.isEmpty())
+//                result += i;
+//
+//            System.out.println(result);
+//        }
+//
+//        slajd 53, zad 1a
 
-        System.out.println("Podaj wzrost w [m] ");
-        double height = Double.parseDouble(bmiIn.nextLine());
+        int[] myIntTab = {9, 3, 5, 6, 45, -3, -100, 0};
 
-        System.out.println("Podaj wagę w [kg] ");
-        double weight = Double.parseDouble(bmiIn.nextLine());
+        int max = myIntTab[0];
 
-        double bmi = weight / (Math.pow(height, 2));
-
-        System.out.printf("Twoje BMI to %.2f\n", bmi);
-
-        if(bmi > 25) {
-            System.out.println(" BMI za wysokie");
-        } else if (bmi < 18) {
-            System.out.println(" BMI za niskie");
-        } else {
-            System.out.println("BMI w normie");
+        for (int i = 1; i < myIntTab.length; i++) {
+            if(max < myIntTab[i]) {
+                max = myIntTab[i];
+            }
         }
 
+        System.out.println("Max to: " + max);
     }
 }
